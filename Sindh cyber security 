@@ -75,3 +75,4 @@ function getReply(q){
  if(q.includes("sindh")) return "Sindh Cyber AI - Sindh ka fakhar hai! Humara mission hai har Sindhi ko cyber secure banana. Karachi, Hyderabad, Sukkur sab ke liye!";
  if(q.includes("hack")) return "Dekho bhai, 2 tarah ki hacking hai: Ethical (jo hum sikhate hain, legal hai) aur Unethical (illegal). Sindh Cyber AI sirf Ethical sikhata hai taake tum police ya company me job le sako!";
  if(q.includes("termux")) return "
+index.html
