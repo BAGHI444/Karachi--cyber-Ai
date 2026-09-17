@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINDH CYBER AI - Official</title>
+<style>
+body{margin:0;background:#020202;color:#00ff88;font-family:monospace}
+.header{text-align:center;padding:50px 20px;background:linear-gradient(#000, #001a0f);border-bottom:3px solid #00ff88;box-shadow:0 0 30px #00ff8855}
+.header h1{font-size:50px;margin:0;letter-spacing:3px;text-shadow:0 0 20px #00ff88}
+.header h1 span{color:#fff}
+.header p{color:#fff;letter-spacing:1px}
+.badge{background:#00ff88;color:#000;padding:5px 15px;border-radius:20px;font-weight:bold;display:inline-block;margin-top:10px}
+.chat-container{max-width:750px;margin:40px auto;background:#0a0a0a;border:2px solid #00ff88;border-radius:15px;overflow:hidden;box-shadow:0 0 25px #00ff8866}
+.chat-header{background:#00ff88;color:#000;padding:14px;font-weight:bold;text-align:center;font-size:18px}
+.chat-box{height:380px;overflow-y:auto;padding:15px;background:#050505}
+.msg{margin:12px 0;padding:12px 16px;border-radius:12px;max-width:80%;line-height:1.4}
+.user{background:#00ff88;color:#000;margin-left:auto}
+.ai{background:#111;border:1px solid #00ff88;color:#00ff88}
+.input-area{display:flex;padding:12px;background:#000;border-top:2px solid #00ff88}
+.input-area input{flex:1;background:#111;border:1px solid #00ff88;color:#00ff88;padding:14px;border-radius:8px;outline:none}
+.input-area button{background:#00ff88;color:#000;border:none;padding:14px 25px;margin-left:10px;border-radius:8px;font-weight:bold;cursor:pointer;font-size:15px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:30px;max-width:1000px;margin:auto}
+.tool-card{border:1px solid #00ff88;padding:25px;text-align:center;border-radius:12px;background:#0a0a0a;transition:0.3s}
+.tool-card:hover{box-shadow:0 0 20px #00ff88;transform:translateY(-5px)}
+.footer{text-align:center;padding:30px;color:#666;border-top:1px solid #111;margin-top:40px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>SINDH <span>CYBER AI</span></h1>
+<p>OFFICIAL - PAKISTAN'S FIRST AI CYBER SECURITY PLATFORM</p>
+<div class="badge">⚡ POWERED BY BAGHI444 | SINDH POLICE CYBER AWARENESS PARTNER ⚡</div>
+<p style="color:#ff4444;margin-top:15px;font-size:13px">[ 100% LEGAL | EDUCATIONAL PURPOSE ONLY ]</p>
+</div>
+
+<div class="chat-container">
+<div class="chat-header">🤖 SINDH CYBER AI - Online | Sindh ka Apna AI Assistant</div>
+<div class="chat-box" id="chatBox">
+<div class="msg ai">Salam! Mai SINDH CYBER AI hun 🇵🇰 Sindh ka official AI. Cyber Security, AI, Termux, Ethical Hacking - kuch bhi pucho! Mai bilkul tumhare bhai jaisa jawab dunga.</div>
+</div>
+<div class="input-area">
+<input type="text" id="userInput" placeholder="Sawal likho...">
+<button onclick="sendMsg()">SEND 🚀</button>
+</div>
+</div>
+
+<div class="tools">
+<div class="tool-card"><h3>🛡️ SINDH IP SCANNER</h3><p>Apni IP Location Check Karo</p></div>
+<div class="tool-card"><h3>🔑 SECURE SINDH</h3><p>Password Strong Hai Ya Nahi?</p></div>
+<div class="tool-card"><h3>🎮 CYBER GAME</h3><p>Sindh Hacker Simulation Game</p></div>
+<div class="tool-card"><h3>📚 SINDH COURSE</h3><p>Free Ethical Hacking Seekho</p></div>
+</div>
+
+<div class="footer">
+<h3 style="color:#00ff88">SINDH CYBER AI - OFFICIAL</h3>
+<p>© 2026 Sindh Cyber AI | Founder: BAGHI444 | Karachi, Sindh, Pakistan</p>
+<p>GitHub: github.com/BAGHI444 | Mission: Make Sindh Cyber Secure</p>
+</div>
+
+<script>
+const chatBox = document.getElementById('chatBox');
+const input = document.getElementById('userInput');
+function sendMsg(){
+ let t=input.value.trim(); if(!t) return;
+ let u=document.createElement('div'); u.className='msg user'; u.innerText=t; chatBox.appendChild(u); input.value="";
+ setTimeout(()=>{
+  let a=document.createElement('div'); a.className='msg ai'; a.innerText=getReply(t); chatBox.appendChild(a); chatBox.scrollTop=chatBox.scrollHeight;
+ },700);
+}
+function getReply(q){
+ q=q.toLowerCase();
+ if(q.includes("salam")||q.includes("hi")||q.includes("hello")) return "Walaikum Salam! Sindh Cyber AI me khush amdeed! 🙏 Batao kya help chahiye?";
+ if(q.includes("sindh")) return "Sindh Cyber AI - Sindh ka fakhar hai! Humara mission hai har Sindhi ko cyber secure banana. Karachi, Hyderabad, Sukkur sab ke liye!";
+ if(q.includes("hack")) return "Dekho bhai, 2 tarah ki hacking hai: Ethical (jo hum sikhate hain, legal hai) aur Unethical (illegal). Sindh Cyber AI sirf Ethical sikhata hai taake tum police ya company me job le sako!";
+ if(q.includes("termux")) return "
